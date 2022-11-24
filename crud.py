@@ -1,13 +1,10 @@
 # Операции обработки данных
 # Создание, Чтение, Изменение, Удаление
-import string
 
-import tinydb
 from tinydb import TinyDB, Query
 
 global db
-global User
-db = TinyDB('db.json')
+db = TinyDB('db.json', ensure_ascii=False, encoding='utf-8')
 contacts = db.table("Contacts")
 query = Query()
 
